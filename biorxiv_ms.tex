@@ -1,0 +1,333 @@
+\documentclass[times, twoside, watermark]{zHenriquesLab-StyleBioRxiv}
+
+% packages
+\usepackage{courier} % for computer code in text (or package names, etc.)
+% \usepackage{hyperref} % for hyperlinking to web
+\usepackage{nameref} % for linking to sections by name
+\usepackage{makecell}
+
+% species names comments
+\newcommand\mimulus{\textit{Mimulus}}
+
+
+\leadauthor{Thompson} % surname of the lead author for the running footer
+\setlength{\parindent}{2em}
+
+\begin{document}
+
+\title{\HUGE{Patterns of phenotype expression in F\textsubscript{1} hybrids}}
+\shorttitle{Testing for pleiotropy}
+
+% Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
+\author[1\Letter]{Ken A. Thompson}
+\author[2]{Mackenzie Urquhart-Cronish}
+\author[3]{Kenneth D. Whitney}
+\author[1]{Dolph Schluter}
+
+
+\affil[1]{Department of Zoology \& Biodiversity Research Centre, University of British Columbia, Canada}
+\affil[2]{Department of Botany \& Biodiversity Research Centre, University of British Columbia, Canada}
+\affil[3]{Department of Biology, University of New Mexico, USA}
+
+
+\maketitle
+% TC:break Abstract
+%the command above serves to have a word count for the abstract
+\begin{abstract}
+\noindent
+The phenotype of an otherwise viable and fertile hybrid governs how it functions within its environment and, ultimately, its fitness. Although the ecology of hybrids can be important for maintaining species barriers, little is known about the general patterns and predictors of phenotype expression in hybrids. To address this empirical gap, we compiled data from nearly 200 studies where phenotypic traits were measured in a common environment for two parent populations and first-generation (F\textsubscript{1}) hybrids. We first quantify general patterns of dominance in phenotypic traits and find individual traits are typically halfway between intermediate and parental. We then quantified the degree to which hybrids were 'mismatched' for parental phenotypes due to opposing directional dominance, and find that mismatch in the average hybrid cross is 40 \% of what is maximally possible (without considering transgression). We illustrate the negative fitness consequences of such mismatch for individual hybrid fitness in the field using data from an experimental array of recombinant hybrid sunflowers. After quantifying the patterns of dominance we explore the predictors. We found no evidence that traits tend to exhibit maternally-biased patterns of expression nor that genetic distance between parents affects the expression of phenotypes. In sum, our study suggests that hybrids formed between ecologically divergent natural populations are typically not phenotypically intermediate, but rather display novel trait combinations similar to individual recombinant hybrids. Patterns of dominance and phenotypic variance are likely best determined by population-specific processes rather than general rules.
+\end{abstract} 
+
+\begin{keywords}
+\noindent
+hybridization | speciation | phenotypic mismatch | opposing dominance
+\end{keywords}
+\begin{corrauthor}
+%\texttt{ken.thompson{@}zoology.ubc.ca}
+ken.thompson\at zoology.ubc.ca
+\end{corrauthor}
+
+\section*{Introduction}
+%2, divergent traits: the traits that differ between parental populations could be due to drift too as opposed to divergent selection. (Good point I'll make it)
+% 4.3 and whether Barton’s prediction been observed in any empirical system
+
+When divergent populations occur in sympatry, they might occassionaly mate and form hybrids (\citealt{Mallett2005}). If those hybrids are viable and fertile, whether they survive and reproduce depends on their ability to compete for resources and mates. Because the failure of hybrids failure to backcross with parents effectively limits gene flow between them, such ecological selection against hybrids is an important reproductive isolating barrier underlying speciation (\citealt{Barton1985; @Gompert2017}). Quantifying general patterns of phenotype expression in hybrids is of interest because such patterns can shed light on possible mechanisms of selection against hybrids. For example, if hybrids resemble one parent they may be able to thrive in that parent's niche and readily backcross (\citealt{Mallett1986}) and if they are severely mismatched they may do poorly in either parent's niche (\citealt{Matsubayashi2010; @Arnegard2014; @Cooper2018}). Our goal here is to systematically document pattens of phenotype expression in hybrids and investigate the factors that might predict these patterns. \par
+
+Previous synthetic studies investigating hybrid phenotypes has arrived at a variety of conclusions. Some authors suggest that hybrid intermediacy is the rule (\citealt{Hubbs1940}) whereas others find that hybrids are more mosaics of parental and intermediate characters than they are intermediate (\citealt{Rieseberg1993}). Such previous studies typically lacked a quantitative framework and focussed on just a single taxon, however, limiting our ability to arrive at general conclusions. We use a geometric approach to quantify patterns of hybrid phenotypes in a way that is comparable across all studies. By quantifying the 'net' phenotypic dominance across all traits we can determine the extent to which hybrids are intermediate or tend to resemble one parent more than the other. And by quantifying the 'opposing' phenotypic dominance we can determine the extent to which hybrids have mismatched combinations of divergent parental traits.
+
+In this article, we summarise the results of a systematic literature review of nearly 200 studies that compared the phenotypes of hybrids and parents in a common environment. We quantify patterns of phenotype expression in F~1~ hybrids and investigate whether features of a cross--such as whether it is an intra- or interspecific cross or whether it is between plant or animal species--are associated with the resulting hybrid phenotypes. Our results inform our understanding of the mechanisms that might underly ecology-based selection against hybrids in nature.
+
+% <!-- Intermediate phenotypes can greatly reduce fitness if parents are adapted to alternative resources where intermediate environments or resources are absent or insufficiently abundant, such as in the case of specialization on benthic vs. limnetic prey (\citealt{Hatfield1999] or on alternative host plant species (\citealt{Linn2004].  \par -->
+
+% <!-- Dolph: Fate sentence. Follow by identifying ecological factors in determining hybrid fitness. Intermediate phenotype vs mismatch. Define mismatch and say why it might reduce fitness. improve contrast with 'intrinsic'. Add on a comparison of intermediate to mismatched. Dolph says underdominance = hybrid unfitness... I need to make it clear that it is within- versus BETWEEN locus.-->
+
+%  <!-- For example, F~1~ hybrids can be phenotypically intermediate (\citealt{Hatfield1999], very similar to one parent (\citealt{Merrill2019], a mosaic of divergent parental characters (\citealt{Cooper2018], or display entirely novel traits (\citealt{Stelkens2009_cichlids]. Although there are many possible patterns, it is unclear how common each one is and many  biologsts simply assume that hybrids are phenotypically intermediate. In this article, we synthesize the empirical literature and quantitatively evaluate patterns of phenotypic expression in hybrids. \par -->
+
+% <!-- define mismatch in previous paragraph. opposing dominance is not neccessarily involving two traits though, maybe 1 -->
+
+% <!-- In recent years, biologists have begun to illustrate the ways through which dominance can contribute to postzygotic isolation. @Cooper2018 found that F~1~ hybrids between two *Drosophila* species have mismatched thermal preference and dessication tolerance, leading to high hybrid inviability. Studies in phyophagous insects (\citealt{Matsubayashi2010] and vertebrates (\citealt{Vinsalkova2007]  have documented similar (putative) mismtaches between behaviour and performance traits. Such mismatches have been given the term 'opposing dominance', referencing the fact that the direction of dominance is in opposing directions---some traits are dominant for one parent taxon, and others traits for the second parent taxon. This mechanism of selection against hybrids probably results from epistasis for fitness---interactions among alleles at loci underlying different traits---and generates hybrid incomaptibility. Accordingly, quantifying the extent to which F~1~ hybrids display opposing dominance for ecologically-divergent traits would provide context for the degree to which underdominance vs. epistasis is responsible for F~1~ hybrid unfitness. -->
+
+% <!-- Several previous studies have investigated patterns of character expression in hybrids, but these have some key limitations. For example, @Rieseberg1993 examined the inheritance of phenotypes in crosses between various plant species and concluded that hybrids are typically a mosaic of parental characters. However, this study was not quantitative, focussed only on plants, and included a variety of domesticated taxa. @Stelkens2009_review conducted a more systematic meta-analysis but focussed on univariate transgression rather than multivariate dominance, included many domesticated or lab-adapted taxa, and also mostly considered plants. Other authors have conjectured about patterns in their systems, for example @Hubbs1940 (p. 205) writes, "I have become convinced that as a very general rule the systematic characters of fishes show blending inheritance." A systematic, comprehensive, and quantitative approach is needed to identify generalities in the patterns of phenotypic expression in hybrids. Identifying the tendency for traits to be dominant will inform our understanding of important parameters such as the dominance of alleles fixed during adaptation. Quantifying the extent of 'mismatch' in F~1~ is neccessary to appraise the importance of between-locus isolating barriers in ecology-based reproductive isolation. -->
+
+% <!-- In this article, we compile data to address the following two primary questions: -->
+% <!-- \begin{enumerate} -->
+% <!--   \item Do individual traits typically show additivity--phenotypic intermediacy---or is dominance common? -->
+% <!--   \item When considering the multivariate phenotype, to what degree are hybrids mismatched for different divergent parental characters? -->
+% <!-- why is the third question interesting? maybe just remove it and instead focus on the first two, and indicate that the last one is incidental? Darren said it came 'out of the blue'-->
+% <!-- \end{enumerate}\noindent -->
+% <!-- In addition to these two main questions, we use the compiled data to evaluate the generality of particular features of inheritance, and test verbal models and quantitative predictions from evolutionary theory. For example, we leverage data from crosses conducted in both directions (i.e., P~1~\Female × P~2~\Male and P~1~\Male × P~2~\Female) to determine how common parent-of-origin effects are and whether maternal and/or paternal effects are more common. @Hubbs1940 and @Rieseberg1993 came to quite different conclusions about patterns of character inheritance in hybrids---they focussed on different biological kingdoms for their analyses, and we investigate whether patterns of dominance vary among major branches of the tree of life. We also investigate whether genetic distance among   also use the compiled data to test a fundamental, yet untested, question about the role of pleiotropy in adaptation. Specifically, we test the emergent hypothesis of Fisher's (1930) Geometric Model originally put forward by @Barton2001 that adaptation in response to divergent selection on one trait leads to segregation variance in non-divergent traits. Our results inform the empirical understanding of the genetic architecture of adaptation and its implications for speciation. -->
+
+% % figure 1
+% \begin{figure*}
+% \centering
+% \includegraphics[width=1\linewidth]{Figures/pleiotropy_Figure_1.pdf}
+% \caption{\textbf{Overview of adaptation with pleiotropic alleles and theoretical prediction.} Panel \textbf{A} shows a general overview of Fisher's geometric model, which relies on pleiotropic mutation. The upper section shows the phenotype landscape under consideration, wherein the horizontal axis is body size (small - big) and the vertical axis is body shade (not colour; light - dark). The lower section illustrates the fixation of a pleiotropic allele during adaptation. The original phenotype is medium in size and medium in shade. The optimal phenotype is larger but the same shade. A mutation arises that greatly increases size and has a deleterious pleiotropic effect to darken shade. Since the mutation is beneficial (points inside the circle), it has a high probability of fixation in spite of the deleterious side-effect. Panel \textbf{B} illustrates the theoretical prediction in two diverging populations -- red and blue -- with the same initial phenotype for size and shade---colour here is just used to visually demarcate parent populations and hybrids (purple) and is not considered a trait. The upper section illustrates two alternative adaptive scenarios for comparison. In both scenarios (i) and (ii), shade is under stabilizing selection in the two populations. Scenario (i) is a case where the two populations diverge little in body size and scenario (ii) represents substantial divergence in body size. The lower section of the panel illustrates the outcome of hybridization. The key insight is that the segregation variance in shade is greater in (ii) than (i). Body size segregates as well, but it would do so in a model without pleiotropy whereas shade would not necessarily. Darker recombinant hybrid individuals inherited mostly compensatory alleles that darken shade (i.e., they point `up') and lighter individuals inherited mostly compensatory alleles that darken shade (i.e., they point `down').}
+% \label{fig:Fig1}
+% \end{figure*}
+% % end figure 1
+
+\section*{Methods}\label{METHODS:methods}
+In this section, we provide a brief summary of, and rationale for, our methodology. A detailed explanation of all methods, including a summary of the data sources, is given in the [**Supplementary Materials**](#suppmat). We conducted a systematic literature search and identified 198 studies from which we could collect data of at least one phenotypic trait measured in two parent taxa and F~1~ hybrids in a common environment. We only included studies that measured genotyped wild individuals or crosses between laboratory populations with fewer than ten generations of captivity. In addition, we attempted to include only traits with environment-dependent effects on fitness---traits plausibly under divergent, rather than directional, selection ('nonfitness traits', (\citealt{Merila1999}). To be clear---traits such as 'embryo viability' are almost certainly under directional selection and were not included in our database. By contrast, traits such as 'limb length' might have particular values best suited to some environments and genetic backgrounds---it is implausible that such traits would always be selected to a maximum or minimum value. We collected data from backcross and F~2~ hybrids when it was available. The studies in our analysis spanned a range of phyla but included mostly plants, insects, and vertebrates. We do not use formal phylogenetic comparative methods because we are not testing or proposing a causal model (\citealt{Uyeda2018}). Although we conducted a systematic literature search, a formal meta-analysis is not appropriate here because the data we are synthesizing is observational rather than experimental, and we are generally documenting patterns rather than testing hypotheses or determining the average effect of a treatment. However, we did collect data systematically and adhere to PRISMA guidelines (\citealt{Moher2009}) (see [**Supplementary Materials**](#suppmat)). \par
+
+<!-- dolph was getting really confused about 'pairwise' crosses... need to think more about this and how to alleviate the confusion.-->
+
+We excluded traits where parents were statistically indistinguishable (\textit{P} > 0.05; or < 1 phenotypic SD [of either parent species] difference) phenotypes. We did this because we were specifically interested in understanding patterns of dominance for traits that differentiate species. We then put all traits in all studies on a common scale where one (arbitrary) parent had a value of 0 for all traits and the other had a value of 1. For this reason, dominance and recessivity are two sides of the same coin---considering a single trait, its dominance is the same whether the value is 0.2 or 0.8. Under an expectation of additivity, a hybrid would have a trait value of 0.5 for all traits. For the analyses in the main text, we scaled transgressive traits to equal the phenotype of the nearest parent: this was done because the neccessary scaling between 0 and 1 can inflate hybrid phenotype values considerably. For example, if the true trait values for P~1~, P~2~, and F~1~ are 0, 0.01, and 0.02, repsectively and parents are signiicantly different, then the F~1~ would have a scaled trait value of 2. We show analyses with trangressive traits in the [**Supplementary Materials**](#suppmat). \par
+
+
+\section*{Results}
+I observed a positive correlation between the mean parental phenotypic divergence in statistically divergent traits and segregation variance in statistically indistinguishable traits (Spearman's $\rho$ = 0.800, \textit{P} = 0.000581, \textit{n} = 15) (Figure \ref{fig:Fig2}). The phenotypic difference between parents for statistically indistinguishable traits was not correlated with the segregation variance in those traits (Spearman's $\rho$ = 0.446, \textit{P} = 0.0972, \textit{n} = 15) (Figure \ref{fig:non_divergent}). The patterns were generally robust to data processing decisions (see Table \ref{table:alternatives}), but became non-significant when I included physiological and chemical traits (\textit{P} = 0.052). \par
+
+Divergence time could correlate with phenotypic divergence between populations, which would render it difficult to disentangle the effects of time and phenotypic divergence. A \textit{t}-test did not detect a difference between intra-specific and inter-specific crosses in phenotypic divergence (F\textsubscript{1,13} = 0.013, \textit{P} = 0.912) for the studies in our main analysis. Additional analyses found no support for associations between any variable and genetic divergence (Fig. \ref{fig:Gendist}C), divergence time (Fig. \ref{fig:Gendist}D), or phylogeny (phylogenetic signal test, all \textit{P} > 0.5).
+
+% % figure 2
+% \begin{figure}%[tbhp]
+% \centering
+% \includegraphics[width=.8\linewidth]{Figures/pleiotropy_Figure_2.pdf}
+% \caption{\textbf{Scatterplot depicting the relationship between phenotypic divergence and transgressive segregation variance for morphological traits.} Each point (\textit{n} = 15) represents a unique cross between two populations or species. Points to the right on the horizontal axis have more divergent parents for those traits that are divergent (Spearman's $\rho$ = 0.800, \textit{P} = 0.000581). The line is a loess fit.
+% }
+% \label{fig:Fig2}
+% \end{figure}
+% % end figure 2
+
+We quantified three types of dominance in the data (see Fig. 1). Within a cross, each dominance metric was scaled between 0 and 1. The first metric of dominance is 'univariate' dominance (d~uni~), which consideres each trait individually. d~uni~ is measured as the average deviation of trait values from 0.5 (the additive expecation) regardless of direction. Specificailly, d~uni~ was calculated as: 
+
+\[ d_{uni} = \frac{ \sum_{i=1}^{n}2(|z_{i} - 0.5|)}n, \]
+
+where $z_{i}$ is the scaled mean phenotype of trait $i$, and $n$ is the number of traits. A d~uni~ value of 0 means that all traits have values of 0.5 and a value of 1 means that all traits have values that are some combination of 1s and 0s. The second metric of dominance is 'net' dominance (d~net~), which captures multivariate patterns of dominance measured as a function of the relative distance in phenotype space from the hybrid to either parent. Net dominance was calculated as:
+
+\[ d_{net} = 2 \times \Bigg| 0.5 - {\frac {{\vec {\textrm{F}_{1}}}\cdot {\vec {\textrm{P}_{1}}}}{{\vec {\textrm{P}_{1}}}\cdot {\vec {\textrm{P}_{1}}}}}{\vec {\textrm{P}_{1}}}\Bigg| \]
+
+A d~net~ value of 0 means that the mean of all trait values is 0.5, and a value of 1 means that the mean of all trait values is either 0 or 1. Last, we quantified 'opposing' dominance (d~opp~). This is equivalent to the projection of the hybrid phenotype onto the line connecting parents. Specifically, 
+ 
+ We calculated opposing domiance as the shortest Euclidean distance between the mean hybrid phenotype---a point in any number (*n*) of dimensions---and the line connecting parental mean phenotypes (see Fig. 1C). Specifically, this was calculated as:
+
+\[ d_{opp} = \sqrt{\sum_{i=1}^{n}\bigg( {\vec {\textrm{F}_{1i}}} - \textrm{P}_{1i} \times \frac{ \textrm{ha}_{i} \cdot \textrm{ba}_{i}} { \textrm{ba}_{i}^2}\bigg)^2 }, \]
+
+\[ d_{opp} = \sqrt{\sum_{i=1}^{n}\bigg( \textrm{ha}_{i} - \textrm{ba}_{i} \times \frac{ \textrm{ha}_{i} \cdot \textrm{ba}_{i}} { \textrm{ba}_{i}^2}\bigg)^2 }, \]
+<!-- need some advice on how to write this; use vector projection notation! -->
+\noindent
+where \[ \textrm{ha}_{i} = \textrm{F}_{1i} - \textrm{a}_{i}, \]
+
+\[ \textrm{ba}_{i} = \textrm{b}_{i} - \textrm{a}_{i}, \]
+\noindent
+
+We defined opposing dominance as: the perpendicular distance between the mean F~1~ hybrid phenotype and the line connecting the two parental mean phenotypes. A d~opp~ value of 0 means that the F~1~ hybrid phenotype was exactly on the line separating parents and a value of 1 means that the hybrid is maximially 'mismatched'. Figure 1A shows a visualization of scaled trait information in two dimensions, with d~net~ and d~opp~ values for five possible hybrid phenotypes shown in Figure 1B.\par
+
+We were interested in determining whether our metric of opposing dominance predicts fitness in the field in the direction expected. Accordingly, we leverage data from a field experiment in annual sunflowers \textit{Helianthus} where recombinant (BC1) hybrids and parental taxa were grown in a common environment and where individual phenotypes and a fitness proxy were measured. Specific details of the experiment are reported elsewhere (\citealt{Whitney2006}). Recombinant hybrids have among-individual variation in the extent of opposing dominance and also in fitness and therefore this design is ideally suited to investigate the relationship between opposing dominance and fitness.\par
+
+% To insert a figure wider than one column, use the \verb|\begin{figure*}...\end{figure*}| environment. Figures wider than one column should be sized to 11.4 cm or 17.8 cm wide. Use \verb|\begin{SCfigure*}...\end{SCfigure*}| for a wide figure with side captions.
+
+\section*{Results}
+
+In the compiled data, the mean univariate dominance (± 1SE) was 0.502 ±  (Fig. 2A), which suggests that the average trait is not exactly intermediate but rather halfway in between intermediate and dominant. The mean (± 1SE) net dominance was 0.362 ±  (Fig. 2B), which suggests that the multivariate hybrid phenotype does tend to resemble one parent about 36 \% more than the other. Opposing dominance---or 'mismatch---in hybrids had a mean (± 1 SD) value of 0.400 ±  (Fig. 2C), which suggests that opposing dominance is often nearly half of its maximum possible value. \par
+
+We next investigated whether phenotype expression of F~1~ hybrids is affected by genetic distance (intraspecific vs. interspecific crosses) and phylogeny (taxon). As a proxy for genetic distance, we compared intra-specific and inter-specific crosses (our qualitative conclusions are unchanged if we use a continuous metric of genetic distance; see [**Supplementary Materials**](#suppmat)). No metrics of dominance differed among intra-specific and inter-specific crosses, nor did the frequency of transgressive traits (Fig. 3; Fig. SX). We next asked if patterns of dominance change across the phylogeny. For these analyses we only considered morphological traits because they are generally comparable across taxonomic groups. A simple analysis suggests that individual traits are actually slightly (20 \%) more dominant in animals (mean d~uni~ = 0.549 ± 0.0306) than in plants (mean d~uni~ = 0.457 ± 0.0290) (F~1,153~ = 4.6287, _P_ = 0.03301) (Fig. 4). No other patterns differed between plants and animals, or among animal phyla. \par
+
+Many of the crosses in the database were conducted in both directions (i.e., P~1~\Female × P~2~\Male and P~1~\Male × P~2~\Female), allowing us to investigate parent-of-origin effects. We did a simple vote-counting approach to start, asking for each trait whether the phenotype of reciprocal F~1~ hybrids demonstrate maternal or paternal bias. Across all 319 traits where crosses were measured in both directions, 172 (53.9 \%) showed a bias toward the maternal parent, a proportion which is not significantly different from 0.5 (binomial test; *P* = 0.1789). We analyzed the data in a few other ways and came to the same conclusion each time (see [**Supplementary Materials**](#suppmat)). This suggests that, in the database, maternally-biased phenotype expression is as common as paternally-biased phenotype expression.
+
+%%%%%%%%%%%%%%
+% DISCUSSION %
+%%%%%%%%%%%%%%
+
+\section*{Discussion}
+We compiled data from studies that measured the expression of phenotypic traits in in hybrids and then used these data to characterize general patterns of phenotype expression in hybrids. Importantly, the standard deviations surrounding the mean values are quite large. Which means it will be difficult to make accurate predictions about the outcome of any individual cross. Our main conclusions therefore are most relevant for characterizing the general outcomes of hybridization. Phenotypic dominance is quite common, with individual traits tending to resemble one parent about 50 \% more than the other. In population genetics, the coefficient *h* is used to determine the dominacne for fitness of an allele. Considering phenotypes instead of fitness, it seems that *h* = 0.25 or *h* = 0.75. the most common value for This pattern contributes to our primary finding, which is that 'trait mismatch'---opposing dominance---is quite common in F~1~ hybrids. Indeed, since the main 'net' dominance is approximately 0.36 and the main 'opposing' dominance is 0.4, this indicates that F~1~ hybrids are often more mismatched than they are intermediate. We also found that genetic distance is not a significant predictor of dominance or the frequency of transgressive segregation, at least in F~1~s. Finally, we tested an outstanding prediction of Fisher's (1930) genetic model and found support for the hypothesis that pleiotropic alleles are often incorporated during divergent phenotypic adaptation. In this section, we discuss our key findings in the context of previous studies and also highlight the implications for speciation research.
+
+\subsection*{Genetic causes of phenotypic mosaicism}
+Why is dominance so commonly observed in our data? Fortunately, a considerable body of theory exists surrounding the evolution of dominance (\citealt{Keightley1996}). @Fisher1930 predicted that dominance largely evolves due to modification of heterozygotes (i.e., 'modifier' alleles), but studies over the succeeeding decades suggested that the might not be the best explanation for the prevelance of dominance (\citealt{Charlesworth1998}). \cite{Wright1934} instead argued that dominance is an inextricable feature of an allele caused by underlying physiological features of a substituion. Haldane (1924, 1927) determined that recessive alleles are less likely to be used for adaptation than those exhibiting some expression in the heterozygote, this loss of reccessive beneficial alleles eventually being termed 'Haldane's sieve'. Although alleles that arise *de novo* enjoy a higher probability of fixation if they are dominant, dominance is not as much of a factor in determining the fate of alleles selected from standing variation (\citealt{Orr2001; @Hermisson2005}). It is not possible to know for certain the causes of dominance in our data, or even whether the observed dominance is due to the fixation of dominant or recessive derived alleles because they are two sides of the same coin. The main conclusion we can draw is that alleles that change frequency in response to (putatively) divergent natural selection typically do not affect the phenotype additively.\par
+
+\subsection*{Comparison to previous studies}
+
+Our results corroborate some previous findings but are inconsistent with others. Based on analysis of morphological traits, @Hubbs1940 suggested that fishes show additive inheritance "as a very general rule". By contrast,  @Rieseberg1993 suggested plant hybrids are best characterized as being "a mosaic of both parental and intermediate morphological characters rather than just intermediate ones". Our quantitative analysis paints a picture of mosaicism rather than intermediacy. However, our data also suggest that phenotypic characters in plants show more blending inheritance than in animals, and this result holds when restricting the animal dataset to only fish (see Fig SX.).\par
+
+\cite{Stelkens2009_review} found that the genetic distance between parents in interspecific crosses was positively correlated with transgression frequency---the tendency for traits to exceed the range of parental values. Our results use an almost entirely independent dataset and do not corroborate their findings (Fig. 3B). This could be due to several reasons. First, we focus on traits where ecological divergence is appreciable, which reduces the likelihood of transgression. Second, we used only crosses where parents were only a few---if any---generations from the wild. Given the wide variation in population demographic history associated with organisms included in our study, we base our main qualitative conclusion on a simple comparison between intra- and inter-specific crosses instead of calculating genetic distance between parent taxa, but additional analyses suggest that no pattern emerges when considering a reduced dataset with continuous estimates of genetic distance. We suggest that the patterns documented by @Stelkens2009_review, which do seem quite robust, are perhaps most relevent to understanding the relationship between genetic distance and the occurence of heterosis ('positive' transgression) and/or hybrid inferiority ('negative' transgression).\par
+
+\subsection*{Implications for speciation research}
+Our results clarify the potential for dominance to have a role in affecting progress toward speciation. Our findings challenge the conjecture that reduced F~1~ fitness is due to phenotypic intermediacy and hybrids 'falling between parental niches'. This is simply because F~1~ hybrids are typically not intermediate for all traits. Rather, F~1~ hybrids often posess novel multivariate phenotypes that are best viewed as phenotypic mosaics. In nature, the phenotype of organisms is an integrated suite of traits that function together to influence performance and ultimately fitness (\citealt{Arnold1983}). Such trait integration result in correlational selection---favouring matched vs. mismatched traits---on combinations of traits and in multiple fitness peaks (\citealt{Brodie1992}). To the extent that mismatched combinations are selected against, opposing dominance is expected to reduce the fitness of hybrids because such dominance patterns directly result in mismatch. Whether extrinsic barriers to gene flow in the F~1~ result primarily from underdominance (i.e., intermediacy) or epistasis (i.e., opposing dominance) is unresolved. Studies quantifying the relative importance of within vs. between locus interactions for causing ecology-based selection against hybrids would be valuable. \par
+
+\section*{Conclusion}
+Although averaging across all phenotypes gives the appearence of 'multivariate' hybrid intermediacy, when traits are examined independently it is clear that non-segregating (i.e., F~1~) hybrids are phenotypic mosaics rather than intermediates. In light of our results, the assumption that hybrids are intermediate should be viewed as tenuous in most cases where data are not presented to support the claim. Perhaps our most important result is that the opportunity for ecology-based hybrid incompatibilities in F$_{1}$ hybrids is substantial. 
+
+\section*{Acknowledgements}
+Feedback from D. Irwin, M. Osmond, S. Otto, J. Santangelo, D. Schluter, and S. Wang benefited the manuscript. K. Davis, N. Frasson, J. Heavyside, and M. Urquhart-Cronish assisted with the literature search (all) and/or data collection (M. U-C). I am grateful to all authors who responded to requests for data. R. Henriques created the bio\textcolor{red}{R}$\chi$iv \LaTeX template. We thank K. Davis, N. Frasson, J. Heavyside, K. Nikiforuk, for assistance with data collections. Discussions with / comments from from D. Irwin, M. Pennell, L. Rieseberg, M. Osmond, and S. Otto. improved the manuscript. We are grateful to the many authors who responded to our requests for data.
+
+
+\section*{Author contributions}
+KAT concieved of the study and designed the data collection protocol with input from MUC and DS. KAT and MUC screened studies and collected data, and KAT contacted authors for data if neccessary. KAT checked all data for accuracy. KAT analysed the data and wrote the paper with input and contributions from MUC and DS.
+
+\section*{Data accessibility}\hypertarget{dataacc}
+All data and analysis code used in this article will be deposited in a repository (e.g., Dryad) following publication. For now, they are available on my %\href{https://github.com/Ken-A-Thompson/pleiotropy-test}{GitHub}.
+\label{Data accessibility}
+\section*{Bibliography}
+% use 'new_bibliography' to make sure tex italics work
+\bibliography{mendeley}
+% i checked up to vallejo-marin (24) 2019-07-22
+%% You can use these special %TC: tags to ignore certain parts of the text.
+%TC:ignore
+%the command above ignores this section for word count
+\onecolumn
+\newpage
+
+% \section*{Word Counts}
+% This section is \textit{not} included in the word count. 
+% \subsection*{Statistics on word count} 
+% \detailtexcount
+% \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Supplementary Information %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\captionsetup*{format=largeformat}
+\section{Supplementary methods}\hypertarget{suppmeth}{}
+\subsection{Search strategy}
+I searched the literature for studies that made measurements of traits in F$_{1}$ hybrids and their parents. To identify studies for possible inclusion, I conducted a systematic literature search using \href{https://www.webofknowledge.com/}{Web of Science}. I included all papers that resulted from a general topic search of “Castle-Wright”, and from a topic search of “F\textsubscript{1} OR hybrid OR inherit*” in articles published in \textit{Evolution}, \textit{Proceedings of the Royal Society B}, \textit{Journal of Evolutionary Biology}, \textit{Heredity}, or \textit{Journal of Heredity}. These journals were selected because a preliminary search indicated that they contained nearly half of all suitable studies. These searches returned 106 studies deemed suitable after screening. To be more comprehensive, I conducted additional systematic searches by conducting similar topic searches among articles citing influential and highly-cited publications (\citealt{Dobzhansky1937, Hubbs1955, Mayr1963, Grant1981, Lande1981, Tave1986, Churchill1994, Bradshaw1998, Lynch1998, Hatfield1999, Schluter2000, Coyne2004}). The full literature search results are available in the archived data. My initial search returned 14048 studies, and after removing duplicates this left 11287 studies to be screened for possible inclusion. This literature search was primarily done for another unpublished study with the goal of understanding phenotype expression in F\textsubscript{1} hybrids.\par
+
+\subsection{Evaluation of studies}
+I required studies to meet several criteria to merit inclusion in my database. First, the study organisms had to originate recently from a natural (i.e., ‘wild’) population. This is because dominance patterns in domestic species differ substantially from non-domesticated species (\citealt{Crnokrak1995}) and because I am explicitly interested in patterns as they occur in nature. I excluded studies using crops, domestic animals, laboratory populations that were > 10 (sexual) generations removed from the wild, or where populations were subject to artificial selection in the lab. If populations were maintained in a lab for more than 10 generations but were found by comparison to still strongly resemble the source population, I included the study (\textit{n} = 2). I also excluded studies where the origin of the study populations was ambiguous. Hybrids had to be formed via the union of gametes from parental taxa, so I excluded studies using techniques like somatic fusion. Second, the ancestry of hybrids had to be clear. Many studies reported phenotypes of natural hybrids, for example in hybrid zones. I did not include these studies unless the hybrid category (i.e., F\textsubscript{1}, F\textsubscript{2}, backcross) was confidently determined with molecular markers (typically over 95 \% probability, unless the authors themselves used a different cut-off in which case I went with their cut-off) or knowledge that hybrids were sterile and thus could not be beyond the F\textsubscript{1}). \par
+
+Third, because I was interested in the inheritance of traits that are proximally related to organismal performance (\citealt{McGee2015}), I required studies to report measurements of at least one ‘non-fitness’ trait ('ordinary' traits [\citealt{AllenOrr2001}]) . Non-fitness traits (hereafter simply ‘traits’) are those that are likely under stabilizing selection at their optimum, whereas ‘fitness’ traits are those that are likely under directional selection and have no optimum (\citealt{Merila1999, Schluter1991}). In most cases it was possible to evaluate this distinction objectively because authors specifically referred to traits as components of fitness, reproductive isolating barriers, or as being affected by non-ecological hybrid incompatibilities. In some cases, however, I made the distinction myself. If particular trait values could be interpreted as resulting in universally low fitness, for example resistance to herbivores or pathogens, this trait was not included. The majority of cases were not difficult to assess, but I have included reasons for excluding particular studies or traits in the database screening notes (see \hyperlink{dataacc}{Data accessibility}).\par
+
+Traits had to be measured in a quantitative manner to be included in the dataset. For example, if a trait was reported categorically (e.g., 'parent-like; or 'intermediate'), I did not include it. Some traits such as mate choice must often be scored discretely (in the absence of multiple trials per individual), even though the trait can vary on independent trials. Accordingly, we included discretely scored traits --- like mate choice --- when it was possible in principle to obtain a different outcome on independent trials. Such traits are recorded as 0s and 1s, but hybrids can be intermediate if both outcomes occurred with equal frequencies. I included traits where authors devised their own discrete scale for quantification. When suitable data were collected by the authors but not obtainable from the article, I wrote to the authors and requested the data. If the author cited a dissertation as containing the data, I attempted to locate the data therein because dissertations are not indexed by Web Of Science. I included multivariate trait summaries (e.g., PC axis scores) when reported. If traits reported both the raw trait values and the PC axis scores for a summary of those same traits, I collected both sets of data but omitted the PCs in our main analyses.\par
+
+Using these criteria, I screened each article for suitability. As a first pass, I quickly assessed each article for suitability by reading the title and abstract and, if necessary, consulting the main text. After this initial search, I retained 407 studies. Since the previous steps were done by a team of five, I personally conducted an in-depth evaluation of each study flagged for possible inclusion. If deemed suitable, I next evaluated whether the necessary data could be obtained. After this second assessment, 198 studies remained. The reasons for exclusion of each study are documented the archived data (see \hyperlink{dataacc}{Data accessibility}). \par
+
+\subsection{Data collection}
+For each study, I recorded several types of data. First, I recorded the mean, sample size, and an estimate of uncertainty (if available) for each measured trait for each parental crosses and hybrid category. In most cases, these data were included in tables or could be extracted from figures. In some cases, I contacted authors for the raw data or summary data. Each study conducted a minimum of three records to the larger database: one trait measured in each parent and the F\textsubscript{1} generation. Traits were categorized as one of: behaviour, chemical, life history, morphological, physiological, or pigmentation. If the same traits were measured over ontogeny, I used only the final data point. When data were measured in multiple ‘trials’ or 'sites' I pooled them within and then across sites. If data were reported for different cross directions and/or sexes I recorded data for each cross direction / sex combination separately. Data processing was immeasurably aided by the functions implemented in the \texttt{tidyverse} (\citealt{Wickham2017}). \par
+
+For each paper I recorded whether the phenotypes were measured in the lab or field, if in the lab the number of generations of captivity, and whether a correlation matrix (preferably in recombinant -- F\textsubscript{2} or BC -- hybrids; see below) was available or calculable from the raw data or figures. For the present study, specifically, each study would have had to contribute 8 or more datapoints -- two traits from each of P\textsubscript{1}, P\textsubscript{2}, F\textsubscript{1}, and F\textsubscript{2}. Occasionally, different studies analysed different traits from individuals from the same crosses. In these cases, I simply grouped them as being the same study before analysis. \par
+
+\subsubsection{Comments on systematic nature of review}
+I attempted to follow PRISMA (\citealt{Moher2009}) guidelines to the best of my ability. Most of the criteria have been addressed above but a few other comments are warranted. I have no reason to suspect that any bias was introduced about estimates of parental divergence or segregation variance. This is because no studies seemed to have \textit{a priori} hypotheses about such patterns. Accordingly, I do not believe that our estimates suffer from a file drawer problem, since detecting segregation variance in non-divergent traits was not the stated goal of any contributing studies. In addition, a formal meta-analytic framework here is not appropriate because I am not comparing studies that had any experimental treatment. 
+
+\subsection{Estimating genetic divergence and divergence time}
+
+I estimated genetic distance for pairs of species where data were available for both parents. A preliminary screening revealed that the internal transcribed spacer (ITS I and II) was the most commonly available gene for plants and cytochrome b was the most available gene for animals in our dataset. I downloaded sequences in R using the \texttt{rentrez} package (\citealt{Winter2017}), and retained up to 40 sequences per species. Sequences were then aligned with the profile hidden Markov models implemented in the \texttt{align} function in the package, \texttt{aphid} (\citealt{Wilkinson2018}). After aligning sequences I calculated genetic distance by simply counting the number of sites that differed between two aligned sequences, implemented using the the \texttt{raw} model option in the \texttt{dist.dna} function within \texttt{ape} (\citealt{Paradis2018}). \par
+
+I also used \href{http://timetree.org}{timetree} (\citealt{Kumar2017}) to obtain estimates of divergence time for each species pair in their database in years. After obtaining estimates of divergence time I regressed divergence time against the response and predictor variables used in the main analysis.
+
+\subsection{Phylogenetic signal}
+To determine whether patterns might be spurious and caused by differences among taxa, I wished to see if there was phylogenetic signal in the data. If either my response or predictor variables co-varied with phylogeny this might indicate that phylogenetic independent contrasts or similar is necessary for analysis. We retrieved NCBI taxonomy IDs for our species using the \texttt{taxize} \texttt{R} package (\citealt{Chamberlain2013}), and used these IDs (one arbitrarily chosen per cross) to generate a phylogeny using \href{https://phylot.biobyte.de/}{phyloT}. Because branch lengths negligibly affect estimates of phylogenetic signal (\citealt{Munkemuller2012}), I assigned all branches equal lengths and used the \texttt{phylosig} function implemented in \texttt{phytools} (\citealt{Revell2012}) to test for phylogenetic signal via Pagel's \textit{$\lambda$}.
+
+\subsection{Simulations with no dominance}
+Estimates of dominance in our analysis could deviate from zero for statistical reasons. For example, any effect of sampling error will bias our estimates of dominance upwards because if the true (scaled) mean is 0.5 then any variation due to sampling error leads to deviation from this value and therefore the appearence of dominance. In addition, biologically real variation around a true mean of zero leads to absolute values greater than zero. We accordingly wished to determine what sorts of values for dominance would be observed if there truly was no dominance. Accordingly, simulated trait values for our data using the observed standard deviation and equivalent sample sizes, but a true specified mean of 0.5 for each trait. Using these data, we regenerated estimates of univariate, net, and opposing dominance in the exact same way that was done for the real data. We calculated point estimates for 10000 simulated datasets and then compared these values to the observed data. We show these results in Fig. X. These analyses were aided greatly by the 'magicfor' R package (\citealt{Makiyama2016}), which assists with the creation of output objects from \texttt{for} loops. By comparing our observed estimates (thick red line in Fig. X) to the distribution of values without dominance, it is clear that our results reflect biological patterns of dominance rather than sampling or statistical artefacts.
+
+\subsection{Effects of laboratory captivity and of natural vs. laboratory hybrids}
+
+Although all studies in our dataset had a maximum of 10 generations of laboratory captivity before the onset of experiments, we wished to investigate whether there were systematic effects of laboratory breeding on dominance patterns. In addition, some studies (*n* = X) had wild hybrids where as the remaining (*n* = Y) studies used experimental crosses. The number of generations in the lab was defined as the 0 if the parents of F~1~ hybrids were collected---at any developmental stage from seed to adult---in the field. For example, seeds of two plant species were collected in the field and these seeds were grown in the glasshouse to generate F~1~ hybrids, this was recorded as zero generations.
+An analysis of patterns in crosses compared to wild hybrids did not reveal any systematic differences for any of our three metrics of dominance (Fig. X). As might have been expected, we found a positive---albeit weak---relationship between the number of generations in the lab and various patterns of dominance (Fig. X). \par
+
+\newpage
+
+\captionsetup*{format=largeformat}
+\section{Supplementary results} \label{section:Supplementary results}
+\subsection{Analyses with alternative analysis, filtering, and binning protocols}
+
+Although the analysis presented in the main text is, in my view, the most justifiable, there were several subjective decisions that I made when going from raw data to summary statistics. Accordingly, I wished to investigate the extent to which my findings were robust to making alternative choices. In this section I present a simple table showing the Spearman's $\rho$ coefficient and \textit{P}-value for the correlation between phenotypic divergence in divergent traits and segregation variance in non-divergent traits. In all but one case, the pattern remains statistically significant.
+
+There were correlations between sample size and some of my response variables, including estimates of parental divergence. To determine if my results were robust to the exclusion of potentially low-power studies, I generated two new datasets with studies measuring fewer than (i) 20 or (ii) 70 parental individuals excluded. Sample size did not predict parental divergence for these datasets. These results are presented below in Table \ref{table:alternatives} and indicate that sample size is not responsible for the pattern. I also note that a multiple regression with parental divergence and sample size as predictors --- flawed because of potential heteroskedasticity and low data - predictor ratio --- indicated that only parental divergence was a significant predictor of segregation variance (divergence \textit{P} = 0.0195; sample size \textit{P} = 0.755).
+
+% \renewcommand{\thetable}{S\arabic{table}}
+
+% \vspace{0.5em}
+% \begin{table*}[h]
+% \caption{\textbf{Alternative data filtering and binning.} All analyses with morphological traits only and binning based on statistical tests except where noted. The segregation variance of physiological traits and chemical traits was typically outside the magnitude observed in morphological traits, so we analyze the patterns for all traits and for all traits excluding physiological and chemical traits.}
+% \begin{center}
+%  \begin{tabular}{||c c c c||} 
+%  \hline
+%  Difference & Description & Spearman's $\rho$ & \textit{P} \\ [0.5ex] 
+%  \hline\hline
+%  Main text analysis & For reference & 0.8 & 0.0005809 \\ 
+%  \hline
+%  Less strict binning & \makecell{Traits with $\geq$ 1 SD difference \\ between parents deemed 'divergent'} & 0.714 & 0.00543 \\
+%  \hline
+%  Same segvar fomula; difference & Eqn. \ref{eq:1} used but difference not ratio & 0.729 & 0.00286 \\
+%  \hline
+%  Alternative segvar fomula; ratio & segvar = var(F\textsubscript{2}) / var(F\textsubscript{2}) & 0.607 & 0.0186 \\
+%  \hline
+%  Alternative segvar fomula; difference & segvar = var(F\textsubscript{2}) $-$ var(F\textsubscript{2}) & 0.607 & 0.0186 \\
+%  \hline
+%  All traits included & No longer restricted to Morphology & 0.518 & 0.0523 \\
+%   \hline
+%  Most traits included & \makecell{All traits except for physiology \& life history \\ (morphology, behaviour, pigment, life history)} & 0.451 & 0.0364 \\
+%   \hline  
+%  No transformation & No log transformation of variables & 0.746 & 0.00202\\
+%   \hline
+%  Sample size filter \#1 & No studies with fewer than 20 parent individuals & 0.736 & 0.0.00557\\
+%   \hline
+%  Sample size filter \#2 & No studies with fewer than 70 parent individuals & 0.762 & 0.0368\\[1ex] 
+%  \hline
+% \end{tabular}
+% \end{center}
+% \label{table:alternatives}
+% \end{table*}
+
+%TC:endignore
+%the command above ignores this section for word count
+\newpage
+\section{Supplementary figures} \label{supfigs:SUPP FIGS}
+
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\setcounter{figure}{0}
+
+% % individual-based simulation results
+% \begin{figure*}[h] % 'h' stands for 'here
+% \centering
+% \includegraphics[width=.8\linewidth]{Figures/sims_fig.pdf}
+% \caption{\textbf{Simulation results to illustrate theoretical prediction.} I conducted individual based simulations using methods similar to those described fully in \cite{Thompson2019}, which is open access. Briefly, two initially identical populations diverged without gene flow between them for 1000 generations. All mutations were unique to each population (no parallelism). Individuals had two traits and only trait 1 was under selection. Optima were defined as [\textit{d}, 0] for population 1 and [\textit{-d}, 0] for population 2, where \textit{d} is the distance to the optimum from the origin. I vary \textit{d} along the horizontal axis in all figures. After 1000 generations I made interpopulation hybrids and measured the variance in traits 1 (\textit{y}-axis, top row) and 2 (\textit{y}-axis, bottom row). Panels \textbf{A} and \textbf{D} show simulations where populations adapt from pleiotropic but very small alleles. Panels \textbf{B} and \textbf{E} show the case where mutations are appreciably large but not pleiotropic---only affecting trait 1 or trait 2 but never both. Panels \textbf{C} and \textbf{F} show the case where mutations are appreciably large-effect and can affect both traits simultaneously. Simulation code is archived online. Simulations are haploid and so the F\textsubscript{1} variance is the segregation variance. Here is what I would like you to get from the figure:(1) When mutations are small, there is no relationship between \textit{d} and segregation variance in any trait, even with universal pleiotropy. (2) When mutations are large but there is no pleiotropy, a relationship between \textit{d} and and segregation variance is observed only for the divergently-selected trait. And (3), with pleiotropic mutations of reasonably large effect, we see a relationship between \textit{d} and and segregation variance for both traits. The only parameter that varies (other than the presence of pleiotropy) is mutation effect size; set to 10\textsuperscript{-6} in panels \textbf{A} and \textbf{D} and and 0.1 in the others.}
+% \label{fig:sims}
+% \end{figure*}
+% % end figure
+% \newpage
+
+
+% % diagnostics of lm
+% \begin{figure*}[h] % 'h' stands for 'here
+% \centering
+% \includegraphics[width=.8\linewidth]{Figures/diagnostics_fig.pdf}
+% \caption{\textbf{Diagnostics of the linear model testing the main hypothesis.} The figure was produced with the \texttt{autoplot} function in the \texttt{ggfortify} R package. Although the linear regression is significant (F\textsubscript{1,12} = 10.03, \textit{r}\textsuperscript{2} = 0.455, \textit{P} = 0.00812), the diagnostic plots reveal significant heteroskedasticity (Breusch-Pagan test \textit{P} = 0.00182).}
+% \label{fig:diagnostics_fig}
+% \end{figure*}
+% % end figure
+% \newpage
+
+% % complementary analysis with non-divergent traits
+% \begin{figure*}[h] % 'h' stands for 'here
+% \centering
+% \includegraphics[width=.8\linewidth]{Figures/non_divergent_fig.pdf}
+% \caption{\textbf{Segregation variance in non-divergent traits is not predicted by divergence in those traits.} This analysis complements the analysis in the main text. A Spearman's rank-order correlation is non significant ($\rho$ = 0.446; \textit{P} = 0.0972).}
+% \label{fig:non_divergent}
+% \end{figure*}
+% % end figure
+% \newpage
+
+% % genetic distance figures
+% \begin{figure*}[h] % 'h' stands for 'here
+% \centering
+% \includegraphics[width=.8\linewidth]{Figures/gendist_fig.pdf}
+% \caption{\textbf{All available evidence suggests that phenotypic divergence between parents is uncorrelated with their divergence time.} Panels \textbf{A} and \textbf{B} use intra- vs interspecific crosses as a proxy for divergence time. Panel \textbf{A} compares the taxa analyzed in the main text (\textit{P} = 0.9...) and panel \textbf{B} uses a larger dataset of 198 studies (\textit{P} = 0.268). Panel \textbf{C} uses continuous genetic distance between each pair of parents for which I could obtain DNA sequences in the larger database of 198 studies; sequence divergence does not predict parental phenotypic divergence (\textit{P} = 0.746). Panel \textbf{D} uses estimates of divergence time from timetree for all pairs of species for which data were available; there is no relationship (\textit{P} = 0.93). I calculated a unique value for each unique pair of species---if two studies crossed the same two species (regardless of subspecies or population status) the species pair only provides a single datum. For example, a study not included in the subset analyzed in the main text crossed \textit{Drosophila simulans} to multiple \textit{D. melanogaster} populations, but only provided a single datapoint for panels \textbf{B} and \textbf{C}.
+% }
+% \label{fig:Gendist}
+% \end{figure*}
+% end figure
+% \newpage
+\end{document}
